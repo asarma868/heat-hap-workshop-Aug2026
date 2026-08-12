@@ -62,4 +62,4 @@ The workshop runs in five parts, roughly 40-45 minutes total:
 
 ## Questions
 
-Open an issue on this repo, or reach out to [your contact info].
+Open an issue on this repo, or reach out to Amruta
