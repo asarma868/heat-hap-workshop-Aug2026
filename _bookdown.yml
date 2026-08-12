@@ -1,0 +1,3 @@
+book_filename: "HAP_Evaluation_Workshop"
+output_dir: "docs"
+delete_merged_file: true
