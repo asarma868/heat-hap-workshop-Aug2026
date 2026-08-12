@@ -30,7 +30,7 @@ data-generating process.
 |---|---|
 | `HAP_Evaluation_Workshop.Rmd` | The workshop itself: R Markdown source, built as a [bookdown](https://bookdown.org/) book |
 | `_bookdown.yml` | bookdown build configuration |
-| `docs/` | The rendered HTML book (what GitHub Pages serves) |
+| `docs/` | The rendered HTML book |
 
 ## Following along in the workshop
 
