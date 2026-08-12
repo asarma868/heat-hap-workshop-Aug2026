@@ -22,9 +22,6 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, fig.width =
 
 # Welcome {-}
 
-*(About 5 minutes)*
-
-
 **A note on the data before we start.** Everything in this workshop is
 **simulated**. It is built to loosely resemble the scale and population
 characteristics reported in the PRIME-Boston Boston Emergency Services Team
@@ -270,7 +267,7 @@ encounters %>%
 ```
 
 
-# Method 1: Time-Stratified Case-Crossover (10 min)
+# Method 1: Time-Stratified Case-Crossover
 
 Each case (an encounter) is matched to a handful of control days: same
 person's location, same calendar month and year, same day of week as the
@@ -356,7 +353,7 @@ each other, and the case-crossover design by itself has no mechanism for
 netting out a citywide secular trend that shifted between the two multi-
 year windows. That's exactly the gap the next method is built to close.
 
-# Method 2: Difference-in-Differences (12 min)
+# Method 2: Difference-in-Differences
 
 This section follows a three-step DiD pipeline: a descriptive "Table 1"
 style pre/post comparison with a naive percentage-based DiD term, an
@@ -592,7 +589,7 @@ week, month, year, and holidays. Because we built a true attenuation of
 about 36% into the simulation, a well-specified DiD model should land
 somewhere in that neighborhood for the overall estimate.
 
-# Method 3: Inverse Probability Weighting for Pre/Post Comparison (8 min)
+# Method 3: Inverse Probability Weighting for Pre/Post Comparison
 
 The DiD model above still assumes the population being served didn't
 change in ways that matter. But we built in exactly the kind of
@@ -678,7 +675,7 @@ the work you might otherwise have attributed to the intervention itself,
 exactly the ambiguity Hess et al. could not rule out for Ahmedabad
 because they had no individual-level data to weight on.
 
-# Bringing It Together (5 min)
+# Bringing It Together
 
 ```{r comparison-table}
 true_effect_note <- "True simulated effect: ~36% reduction in heat-slope after 2016"
