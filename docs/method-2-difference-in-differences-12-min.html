@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Method 2: Difference-in-Differences (12 min) | Evaluating Heat Adaptation Interventions</title>
+  <meta name="description" content="3 Method 2: Difference-in-Differences (12 min) | Evaluating Heat Adaptation Interventions" />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Method 2: Difference-in-Differences (12 min) | Evaluating Heat Adaptation Interventions" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Method 2: Difference-in-Differences (12 min) | Evaluating Heat Adaptation Interventions" />
+  
+  
+  
+
+<meta name="author" content="Dr. Amruta Nori-Sarma" />
+
+
+<meta name="date" content="2026-08-13" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="method-1-time-stratified-case-crossover-10-min.html"/>
+<link rel="next" href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="chapter" data-level="1" data-path="building-the-synthetic-best-like-population-10-min.html"><a href="building-the-synthetic-best-like-population-10-min.html"><i class="fa fa-check"></i><b>1</b> Building the Synthetic BEST-like Population (10 min)</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="building-the-synthetic-best-like-population-10-min.html"><a href="building-the-synthetic-best-like-population-10-min.html#a-daily-temperature-series-with-a-known-extreme-heat-threshold"><i class="fa fa-check"></i><b>1.1</b> A Daily Temperature Series with a Known “Extreme Heat” Threshold</a></li>
+<li class="chapter" data-level="1.2" data-path="building-the-synthetic-best-like-population-10-min.html"><a href="building-the-synthetic-best-like-population-10-min.html#simulating-individual-encounters-with-a-known-ground-truth-baked-in"><i class="fa fa-check"></i><b>1.2</b> Simulating Individual Encounters, with a Known Ground Truth Baked In</a></li>
+<li class="chapter" data-level="1.3" data-path="building-the-synthetic-best-like-population-10-min.html"><a href="building-the-synthetic-best-like-population-10-min.html#sanity-checks"><i class="fa fa-check"></i><b>1.3</b> Sanity Checks</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="method-1-time-stratified-case-crossover-10-min.html"><a href="method-1-time-stratified-case-crossover-10-min.html"><i class="fa fa-check"></i><b>2</b> Method 1: Time-Stratified Case-Crossover (10 min)</a></li>
+<li class="chapter" data-level="3" data-path="method-2-difference-in-differences-12-min.html"><a href="method-2-difference-in-differences-12-min.html"><i class="fa fa-check"></i><b>3</b> Method 2: Difference-in-Differences (12 min)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="method-2-difference-in-differences-12-min.html"><a href="method-2-difference-in-differences-12-min.html#descriptive-table-1-with-a-naive-did-term"><i class="fa fa-check"></i><b>3.1</b> 2.1 Descriptive Table 1, with a naive DiD term</a></li>
+<li class="chapter" data-level="3.2" data-path="method-2-difference-in-differences-12-min.html"><a href="method-2-difference-in-differences-12-min.html#event-study-plot"><i class="fa fa-check"></i><b>3.2</b> 2.2 Event-study plot</a></li>
+<li class="chapter" data-level="3.3" data-path="method-2-difference-in-differences-12-min.html"><a href="method-2-difference-in-differences-12-min.html#poisson-regression-via-model_generalized"><i class="fa fa-check"></i><b>3.3</b> 2.3 Poisson regression via <code>model_generalized()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html"><i class="fa fa-check"></i><b>4</b> Method 3: Inverse Probability Weighting for Pre/Post Comparison (8 min)</a></li>
+<li class="chapter" data-level="5" data-path="bringing-it-together-5-min.html"><a href="bringing-it-together-5-min.html"><i class="fa fa-check"></i><b>5</b> Bringing It Together (5 min)</a></li>
+<li class="chapter" data-level="" data-path="session-info.html"><a href="session-info.html"><i class="fa fa-check"></i>Session Info</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Evaluating Heat Adaptation Interventions</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="method-2-difference-in-differences-12-min" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> Method 2: Difference-in-Differences (12 min)<a href="method-2-difference-in-differences-12-min.html#method-2-difference-in-differences-12-min" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This section follows a three-step DiD pipeline: a descriptive “Table 1”
+style pre/post comparison with a naive percentage-based DiD term, an
+event-study plot with a proper event-time regression, and then the
+formal Poisson regression, run through a reusable
+<code>model_generalized()</code> function.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="method-2-difference-in-differences-12-min.html#cb19-1" tabindex="-1"></a><span class="co"># a few extra day-level covariates the models below expect: day of week,</span></span>
+<span id="cb19-2"><a href="method-2-difference-in-differences-12-min.html#cb19-2" tabindex="-1"></a><span class="co"># week number, and a simple summer holiday flag</span></span>
+<span id="cb19-3"><a href="method-2-difference-in-differences-12-min.html#cb19-3" tabindex="-1"></a>holiday_years <span class="ot">&lt;-</span> <span class="dv">2010</span><span class="sc">:</span><span class="dv">2020</span></span>
+<span id="cb19-4"><a href="method-2-difference-in-differences-12-min.html#cb19-4" tabindex="-1"></a>holidays <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb19-5"><a href="method-2-difference-in-differences-12-min.html#cb19-5" tabindex="-1"></a>  <span class="fu">as.Date</span>(timeDate<span class="sc">::</span><span class="fu">holiday</span>(holiday_years, <span class="st">&quot;USMemorialDay&quot;</span>)),</span>
+<span id="cb19-6"><a href="method-2-difference-in-differences-12-min.html#cb19-6" tabindex="-1"></a>  <span class="fu">as.Date</span>(timeDate<span class="sc">::</span><span class="fu">holiday</span>(holiday_years, <span class="st">&quot;USIndependenceDay&quot;</span>)),</span>
+<span id="cb19-7"><a href="method-2-difference-in-differences-12-min.html#cb19-7" tabindex="-1"></a>  <span class="fu">as.Date</span>(timeDate<span class="sc">::</span><span class="fu">holiday</span>(holiday_years, <span class="st">&quot;USLaborDay&quot;</span>))</span>
+<span id="cb19-8"><a href="method-2-difference-in-differences-12-min.html#cb19-8" tabindex="-1"></a>)</span>
+<span id="cb19-9"><a href="method-2-difference-in-differences-12-min.html#cb19-9" tabindex="-1"></a></span>
+<span id="cb19-10"><a href="method-2-difference-in-differences-12-min.html#cb19-10" tabindex="-1"></a>daily_counts <span class="ot">&lt;-</span> encounters <span class="sc">%&gt;%</span></span>
+<span id="cb19-11"><a href="method-2-difference-in-differences-12-min.html#cb19-11" tabindex="-1"></a>  <span class="fu">count</span>(date, <span class="at">name =</span> <span class="st">&quot;n_encounters_actual&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb19-12"><a href="method-2-difference-in-differences-12-min.html#cb19-12" tabindex="-1"></a>  <span class="fu">right_join</span>(daily_df, <span class="at">by =</span> <span class="st">&quot;date&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb19-13"><a href="method-2-difference-in-differences-12-min.html#cb19-13" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb19-14"><a href="method-2-difference-in-differences-12-min.html#cb19-14" tabindex="-1"></a>    <span class="at">n_encounters_actual =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(n_encounters_actual), <span class="dv">0</span>, n_encounters_actual),</span>
+<span id="cb19-15"><a href="method-2-difference-in-differences-12-min.html#cb19-15" tabindex="-1"></a>    <span class="at">dow   =</span> <span class="fu">wday</span>(date),</span>
+<span id="cb19-16"><a href="method-2-difference-in-differences-12-min.html#cb19-16" tabindex="-1"></a>    <span class="at">week  =</span> <span class="fu">week</span>(date),</span>
+<span id="cb19-17"><a href="method-2-difference-in-differences-12-min.html#cb19-17" tabindex="-1"></a>    <span class="at">holid =</span> <span class="fu">as.integer</span>(date <span class="sc">%in%</span> holidays)</span>
+<span id="cb19-18"><a href="method-2-difference-in-differences-12-min.html#cb19-18" tabindex="-1"></a>  )</span></code></pre></div>
+<div id="descriptive-table-1-with-a-naive-did-term" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> 2.1 Descriptive Table 1, with a naive DiD term<a href="method-2-difference-in-differences-12-min.html#descriptive-table-1-with-a-naive-did-term" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Compute each group’s share of its own period’s total, take pre-to-post
+differences within the extreme and non-extreme groups separately, then
+difference those two differences, a quick sanity check to run before
+turning to any regression model.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="method-2-difference-in-differences-12-min.html#cb20-1" tabindex="-1"></a>pre_total  <span class="ot">&lt;-</span> <span class="fu">sum</span>(daily_counts<span class="sc">$</span>n_encounters_actual[daily_counts<span class="sc">$</span>post <span class="sc">==</span> <span class="dv">0</span>])</span>
+<span id="cb20-2"><a href="method-2-difference-in-differences-12-min.html#cb20-2" tabindex="-1"></a>post_total <span class="ot">&lt;-</span> <span class="fu">sum</span>(daily_counts<span class="sc">$</span>n_encounters_actual[daily_counts<span class="sc">$</span>post <span class="sc">==</span> <span class="dv">1</span>])</span>
+<span id="cb20-3"><a href="method-2-difference-in-differences-12-min.html#cb20-3" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="method-2-difference-in-differences-12-min.html#cb20-4" tabindex="-1"></a>did_table1 <span class="ot">&lt;-</span> daily_counts <span class="sc">%&gt;%</span></span>
+<span id="cb20-5"><a href="method-2-difference-in-differences-12-min.html#cb20-5" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">extreme_chr =</span> <span class="fu">ifelse</span>(extreme <span class="sc">==</span> <span class="dv">1</span>, <span class="st">&quot;&gt;= 90th pctile&quot;</span>, <span class="st">&quot;&lt; 90th pctile&quot;</span>),</span>
+<span id="cb20-6"><a href="method-2-difference-in-differences-12-min.html#cb20-6" tabindex="-1"></a>         <span class="at">post_chr    =</span> <span class="fu">ifelse</span>(post <span class="sc">==</span> <span class="dv">1</span>, <span class="st">&quot;Post&quot;</span>, <span class="st">&quot;Pre&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb20-7"><a href="method-2-difference-in-differences-12-min.html#cb20-7" tabindex="-1"></a>  <span class="fu">group_by</span>(extreme_chr, post_chr) <span class="sc">%&gt;%</span></span>
+<span id="cb20-8"><a href="method-2-difference-in-differences-12-min.html#cb20-8" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">visits =</span> <span class="fu">sum</span>(n_encounters_actual), <span class="at">.groups =</span> <span class="st">&quot;drop&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb20-9"><a href="method-2-difference-in-differences-12-min.html#cb20-9" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">unite</span>(<span class="st">&quot;group&quot;</span>, extreme_chr, post_chr, <span class="at">sep =</span> <span class="st">&quot; &quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb20-10"><a href="method-2-difference-in-differences-12-min.html#cb20-10" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_wider</span>(<span class="at">names_from =</span> group, <span class="at">values_from =</span> visits)</span>
+<span id="cb20-11"><a href="method-2-difference-in-differences-12-min.html#cb20-11" tabindex="-1"></a></span>
+<span id="cb20-12"><a href="method-2-difference-in-differences-12-min.html#cb20-12" tabindex="-1"></a>did_table1 <span class="ot">&lt;-</span> did_table1 <span class="sc">%&gt;%</span></span>
+<span id="cb20-13"><a href="method-2-difference-in-differences-12-min.html#cb20-13" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb20-14"><a href="method-2-difference-in-differences-12-min.html#cb20-14" tabindex="-1"></a>    <span class="st">`</span><span class="at">&lt; 90th pctile Pre (%)</span><span class="st">`</span>   <span class="ot">=</span> <span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> <span class="st">`</span><span class="at">&lt; 90th pctile Pre</span><span class="st">`</span>   <span class="sc">/</span> pre_total, <span class="dv">1</span>),</span>
+<span id="cb20-15"><a href="method-2-difference-in-differences-12-min.html#cb20-15" tabindex="-1"></a>    <span class="st">`</span><span class="at">&lt; 90th pctile Post (%)</span><span class="st">`</span>  <span class="ot">=</span> <span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> <span class="st">`</span><span class="at">&lt; 90th pctile Post</span><span class="st">`</span>  <span class="sc">/</span> post_total, <span class="dv">1</span>),</span>
+<span id="cb20-16"><a href="method-2-difference-in-differences-12-min.html#cb20-16" tabindex="-1"></a>    <span class="st">`</span><span class="at">&gt;= 90th pctile Pre (%)</span><span class="st">`</span>  <span class="ot">=</span> <span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> <span class="st">`</span><span class="at">&gt;= 90th pctile Pre</span><span class="st">`</span>  <span class="sc">/</span> pre_total, <span class="dv">1</span>),</span>
+<span id="cb20-17"><a href="method-2-difference-in-differences-12-min.html#cb20-17" tabindex="-1"></a>    <span class="st">`</span><span class="at">&gt;= 90th pctile Post (%)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> <span class="st">`</span><span class="at">&gt;= 90th pctile Post</span><span class="st">`</span> <span class="sc">/</span> post_total, <span class="dv">1</span>),</span>
+<span id="cb20-18"><a href="method-2-difference-in-differences-12-min.html#cb20-18" tabindex="-1"></a>    <span class="st">`</span><span class="at">&lt; 90th pctile Diff</span><span class="st">`</span>  <span class="ot">=</span> <span class="st">`</span><span class="at">&lt; 90th pctile Post (%)</span><span class="st">`</span>  <span class="sc">-</span> <span class="st">`</span><span class="at">&lt; 90th pctile Pre (%)</span><span class="st">`</span>,</span>
+<span id="cb20-19"><a href="method-2-difference-in-differences-12-min.html#cb20-19" tabindex="-1"></a>    <span class="st">`</span><span class="at">&gt;= 90th pctile Diff</span><span class="st">`</span> <span class="ot">=</span> <span class="st">`</span><span class="at">&gt;= 90th pctile Post (%)</span><span class="st">`</span> <span class="sc">-</span> <span class="st">`</span><span class="at">&gt;= 90th pctile Pre (%)</span><span class="st">`</span>,</span>
+<span id="cb20-20"><a href="method-2-difference-in-differences-12-min.html#cb20-20" tabindex="-1"></a>    <span class="st">`</span><span class="at">DiD Term</span><span class="st">`</span> <span class="ot">=</span> <span class="st">`</span><span class="at">&lt; 90th pctile Diff</span><span class="st">`</span> <span class="sc">-</span> <span class="st">`</span><span class="at">&gt;= 90th pctile Diff</span><span class="st">`</span></span>
+<span id="cb20-21"><a href="method-2-difference-in-differences-12-min.html#cb20-21" tabindex="-1"></a>  )</span>
+<span id="cb20-22"><a href="method-2-difference-in-differences-12-min.html#cb20-22" tabindex="-1"></a></span>
+<span id="cb20-23"><a href="method-2-difference-in-differences-12-min.html#cb20-23" tabindex="-1"></a><span class="fu">print</span>(did_table1, <span class="at">width =</span> <span class="cn">Inf</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 1 × 11
+##   `&lt; 90th pctile Post` `&lt; 90th pctile Pre` `&gt;= 90th pctile Post` `&gt;= 90th pctile Pre`
+##                  &lt;int&gt;               &lt;int&gt;                 &lt;int&gt;                &lt;int&gt;
+## 1                40988               43993                  4860                 7383
+##   `&lt; 90th pctile Pre (%)` `&lt; 90th pctile Post (%)` `&gt;= 90th pctile Pre (%)` `&gt;= 90th pctile Post (%)`
+##                     &lt;dbl&gt;                    &lt;dbl&gt;                    &lt;dbl&gt;                     &lt;dbl&gt;
+## 1                    85.6                     89.4                     14.4                      10.6
+##   `&lt; 90th pctile Diff` `&gt;= 90th pctile Diff` `DiD Term`
+##                  &lt;dbl&gt;                 &lt;dbl&gt;      &lt;dbl&gt;
+## 1                 3.80                  -3.8       7.60</code></pre>
+</div>
+<div id="event-study-plot" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> 2.2 Event-study plot<a href="method-2-difference-in-differences-12-min.html#event-study-plot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A proper event-study design: a Poisson regression with the extreme-heat
+indicator interacted with a full set of year-relative-to-intervention
+dummies (event time), so each year gets its own estimated heat effect
+relative to the year immediately before the intervention (event time
+-1, the omitted reference category), rather than just comparing raw
+annual means.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="method-2-difference-in-differences-12-min.html#cb22-1" tabindex="-1"></a>event_study_plot <span class="ot">&lt;-</span> <span class="cf">function</span>(dataframe, outcome_variable, threshold_temp,</span>
+<span id="cb22-2"><a href="method-2-difference-in-differences-12-min.html#cb22-2" tabindex="-1"></a>                              intervention_year, start_year, end_year) {</span>
+<span id="cb22-3"><a href="method-2-difference-in-differences-12-min.html#cb22-3" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="method-2-difference-in-differences-12-min.html#cb22-4" tabindex="-1"></a>  data <span class="ot">&lt;-</span> dataframe <span class="sc">%&gt;%</span></span>
+<span id="cb22-5"><a href="method-2-difference-in-differences-12-min.html#cb22-5" tabindex="-1"></a>    <span class="fu">filter</span>(year <span class="sc">%in%</span> start_year<span class="sc">:</span>end_year) <span class="sc">%&gt;%</span></span>
+<span id="cb22-6"><a href="method-2-difference-in-differences-12-min.html#cb22-6" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">event_time =</span> year <span class="sc">-</span> intervention_year)</span>
+<span id="cb22-7"><a href="method-2-difference-in-differences-12-min.html#cb22-7" tabindex="-1"></a></span>
+<span id="cb22-8"><a href="method-2-difference-in-differences-12-min.html#cb22-8" tabindex="-1"></a>  list_event_times <span class="ot">&lt;-</span> <span class="fu">as.character</span>(<span class="fu">seq</span>(<span class="fu">min</span>(data<span class="sc">$</span>event_time), <span class="fu">max</span>(data<span class="sc">$</span>event_time)))</span>
+<span id="cb22-9"><a href="method-2-difference-in-differences-12-min.html#cb22-9" tabindex="-1"></a>  list_event_times <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;-1&quot;</span>, list_event_times[list_event_times <span class="sc">!=</span> <span class="st">&quot;-1&quot;</span>])</span>
+<span id="cb22-10"><a href="method-2-difference-in-differences-12-min.html#cb22-10" tabindex="-1"></a></span>
+<span id="cb22-11"><a href="method-2-difference-in-differences-12-min.html#cb22-11" tabindex="-1"></a>  data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb22-12"><a href="method-2-difference-in-differences-12-min.html#cb22-12" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">event_time_factor =</span> <span class="fu">factor</span>(event_time, <span class="at">levels =</span> list_event_times))</span>
+<span id="cb22-13"><a href="method-2-difference-in-differences-12-min.html#cb22-13" tabindex="-1"></a></span>
+<span id="cb22-14"><a href="method-2-difference-in-differences-12-min.html#cb22-14" tabindex="-1"></a>  data<span class="sc">$</span>outcome_variable <span class="ot">&lt;-</span> data[[outcome_variable]]</span>
+<span id="cb22-15"><a href="method-2-difference-in-differences-12-min.html#cb22-15" tabindex="-1"></a>  data<span class="sc">$</span>threshold_temp   <span class="ot">&lt;-</span> data[[threshold_temp]]</span>
+<span id="cb22-16"><a href="method-2-difference-in-differences-12-min.html#cb22-16" tabindex="-1"></a></span>
+<span id="cb22-17"><a href="method-2-difference-in-differences-12-min.html#cb22-17" tabindex="-1"></a>  event_model <span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
+<span id="cb22-18"><a href="method-2-difference-in-differences-12-min.html#cb22-18" tabindex="-1"></a>    outcome_variable <span class="sc">~</span> threshold_temp <span class="sc">+</span></span>
+<span id="cb22-19"><a href="method-2-difference-in-differences-12-min.html#cb22-19" tabindex="-1"></a>      (threshold_temp<span class="sc">:</span>event_time_factor) <span class="sc">+</span></span>
+<span id="cb22-20"><a href="method-2-difference-in-differences-12-min.html#cb22-20" tabindex="-1"></a>      event_time_factor <span class="sc">+</span></span>
+<span id="cb22-21"><a href="method-2-difference-in-differences-12-min.html#cb22-21" tabindex="-1"></a>      holid <span class="sc">+</span> year <span class="sc">+</span> dow <span class="sc">+</span> month <span class="sc">+</span> week,</span>
+<span id="cb22-22"><a href="method-2-difference-in-differences-12-min.html#cb22-22" tabindex="-1"></a>    <span class="at">data =</span> data,</span>
+<span id="cb22-23"><a href="method-2-difference-in-differences-12-min.html#cb22-23" tabindex="-1"></a>    <span class="at">family =</span> poisson</span>
+<span id="cb22-24"><a href="method-2-difference-in-differences-12-min.html#cb22-24" tabindex="-1"></a>  )</span>
+<span id="cb22-25"><a href="method-2-difference-in-differences-12-min.html#cb22-25" tabindex="-1"></a></span>
+<span id="cb22-26"><a href="method-2-difference-in-differences-12-min.html#cb22-26" tabindex="-1"></a>  coefficients <span class="ot">&lt;-</span> <span class="fu">coef</span>(event_model)</span>
+<span id="cb22-27"><a href="method-2-difference-in-differences-12-min.html#cb22-27" tabindex="-1"></a>  interaction_coefficient <span class="ot">&lt;-</span> coefficients[<span class="fu">grep</span>(<span class="st">&quot;threshold_temp:event_time_factor&quot;</span>, <span class="fu">names</span>(coefficients))]</span>
+<span id="cb22-28"><a href="method-2-difference-in-differences-12-min.html#cb22-28" tabindex="-1"></a></span>
+<span id="cb22-29"><a href="method-2-difference-in-differences-12-min.html#cb22-29" tabindex="-1"></a>  conf_intervals <span class="ot">&lt;-</span> <span class="fu">confint</span>(event_model)</span>
+<span id="cb22-30"><a href="method-2-difference-in-differences-12-min.html#cb22-30" tabindex="-1"></a>  interaction_confint <span class="ot">&lt;-</span> conf_intervals[<span class="fu">grep</span>(<span class="st">&quot;threshold_temp:event_time_factor&quot;</span>, <span class="fu">rownames</span>(conf_intervals)), ]</span>
+<span id="cb22-31"><a href="method-2-difference-in-differences-12-min.html#cb22-31" tabindex="-1"></a></span>
+<span id="cb22-32"><a href="method-2-difference-in-differences-12-min.html#cb22-32" tabindex="-1"></a>  plot_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">cbind</span>(interaction_coefficient, interaction_confint)) <span class="sc">%&gt;%</span></span>
+<span id="cb22-33"><a href="method-2-difference-in-differences-12-min.html#cb22-33" tabindex="-1"></a>    tibble<span class="sc">::</span><span class="fu">rownames_to_column</span>(<span class="at">var =</span> <span class="st">&quot;EventTime&quot;</span>)</span>
+<span id="cb22-34"><a href="method-2-difference-in-differences-12-min.html#cb22-34" tabindex="-1"></a>  plot_data<span class="sc">$</span>EventTime <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">sub</span>(<span class="st">&quot;^threshold_temp:event_time_factor&quot;</span>, <span class="st">&quot;&quot;</span>, plot_data<span class="sc">$</span>EventTime))</span>
+<span id="cb22-35"><a href="method-2-difference-in-differences-12-min.html#cb22-35" tabindex="-1"></a>  plot_data<span class="sc">$</span>interaction_coefficient <span class="ot">&lt;-</span> <span class="fu">exp</span>(plot_data<span class="sc">$</span>interaction_coefficient)</span>
+<span id="cb22-36"><a href="method-2-difference-in-differences-12-min.html#cb22-36" tabindex="-1"></a>  plot_data<span class="sc">$</span>lowCI <span class="ot">&lt;-</span> <span class="fu">exp</span>(plot_data<span class="sc">$</span>X2.<span class="dv">5</span>..)</span>
+<span id="cb22-37"><a href="method-2-difference-in-differences-12-min.html#cb22-37" tabindex="-1"></a>  plot_data<span class="sc">$</span>uppCI <span class="ot">&lt;-</span> <span class="fu">exp</span>(plot_data<span class="sc">$</span>X97.<span class="dv">5</span>..)</span>
+<span id="cb22-38"><a href="method-2-difference-in-differences-12-min.html#cb22-38" tabindex="-1"></a></span>
+<span id="cb22-39"><a href="method-2-difference-in-differences-12-min.html#cb22-39" tabindex="-1"></a>  new_row <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">EventTime =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">interaction_coefficient =</span> <span class="dv">1</span>, <span class="at">lowCI =</span> <span class="dv">1</span>, <span class="at">uppCI =</span> <span class="dv">1</span>)</span>
+<span id="cb22-40"><a href="method-2-difference-in-differences-12-min.html#cb22-40" tabindex="-1"></a>  plot_data <span class="ot">&lt;-</span> plot_data <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(X2.<span class="dv">5</span>.., X97.<span class="dv">5</span>..))</span>
+<span id="cb22-41"><a href="method-2-difference-in-differences-12-min.html#cb22-41" tabindex="-1"></a>  plot_data2 <span class="ot">&lt;-</span> <span class="fu">rbind</span>(plot_data, new_row)</span>
+<span id="cb22-42"><a href="method-2-difference-in-differences-12-min.html#cb22-42" tabindex="-1"></a></span>
+<span id="cb22-43"><a href="method-2-difference-in-differences-12-min.html#cb22-43" tabindex="-1"></a>  <span class="fu">ggplot</span>(plot_data2, <span class="fu">aes</span>(EventTime, interaction_coefficient)) <span class="sc">+</span></span>
+<span id="cb22-44"><a href="method-2-difference-in-differences-12-min.html#cb22-44" tabindex="-1"></a>    <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb22-45"><a href="method-2-difference-in-differences-12-min.html#cb22-45" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb22-46"><a href="method-2-difference-in-differences-12-min.html#cb22-46" tabindex="-1"></a>    <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> lowCI, <span class="at">ymax =</span> uppCI)) <span class="sc">+</span></span>
+<span id="cb22-47"><a href="method-2-difference-in-differences-12-min.html#cb22-47" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">&quot;#A51C30&quot;</span>, <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb22-48"><a href="method-2-difference-in-differences-12-min.html#cb22-48" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">&quot;grey&quot;</span>) <span class="sc">+</span></span>
+<span id="cb22-49"><a href="method-2-difference-in-differences-12-min.html#cb22-49" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">&quot;Time to intervention (years)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb22-50"><a href="method-2-difference-in-differences-12-min.html#cb22-50" tabindex="-1"></a>    <span class="fu">ylab</span>(<span class="st">&quot;Estimated heat effect, relative to year -1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb22-51"><a href="method-2-difference-in-differences-12-min.html#cb22-51" tabindex="-1"></a>    <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb22-52"><a href="method-2-difference-in-differences-12-min.html#cb22-52" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(</span>
+<span id="cb22-53"><a href="method-2-difference-in-differences-12-min.html#cb22-53" tabindex="-1"></a>      <span class="at">breaks =</span> <span class="fu">min</span>(plot_data2<span class="sc">$</span>EventTime)<span class="sc">:</span><span class="fu">max</span>(plot_data2<span class="sc">$</span>EventTime),</span>
+<span id="cb22-54"><a href="method-2-difference-in-differences-12-min.html#cb22-54" tabindex="-1"></a>      <span class="at">labels =</span> <span class="fu">as.character</span>(<span class="fu">min</span>(plot_data2<span class="sc">$</span>EventTime)<span class="sc">:</span><span class="fu">max</span>(plot_data2<span class="sc">$</span>EventTime))</span>
+<span id="cb22-55"><a href="method-2-difference-in-differences-12-min.html#cb22-55" tabindex="-1"></a>    )</span>
+<span id="cb22-56"><a href="method-2-difference-in-differences-12-min.html#cb22-56" tabindex="-1"></a>}</span>
+<span id="cb22-57"><a href="method-2-difference-in-differences-12-min.html#cb22-57" tabindex="-1"></a></span>
+<span id="cb22-58"><a href="method-2-difference-in-differences-12-min.html#cb22-58" tabindex="-1"></a><span class="fu">event_study_plot</span>(</span>
+<span id="cb22-59"><a href="method-2-difference-in-differences-12-min.html#cb22-59" tabindex="-1"></a>  <span class="at">dataframe =</span> daily_counts, <span class="at">outcome_variable =</span> <span class="st">&quot;n_encounters_actual&quot;</span>,</span>
+<span id="cb22-60"><a href="method-2-difference-in-differences-12-min.html#cb22-60" tabindex="-1"></a>  <span class="at">threshold_temp =</span> <span class="st">&quot;extreme&quot;</span>, <span class="at">intervention_year =</span> <span class="dv">2016</span>,</span>
+<span id="cb22-61"><a href="method-2-difference-in-differences-12-min.html#cb22-61" tabindex="-1"></a>  <span class="at">start_year =</span> <span class="dv">2010</span>, <span class="at">end_year =</span> <span class="dv">2020</span></span>
+<span id="cb22-62"><a href="method-2-difference-in-differences-12-min.html#cb22-62" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="HAP_Evaluation_Workshop_files/figure-html/did-event-study-1.png" width="768" /></p>
+<p><strong>Reading the plot.</strong> Each point is a year’s estimated multiplicative
+effect of an extreme heat day on encounter counts, relative to the year
+right before the intervention. If the intervention worked, you’d expect
+the post-intervention points (event time &gt;= 0) to sit visibly lower than
+the pre-intervention points. Flat, overlapping confidence intervals
+across the dashed line, on the other hand, look a lot like the pattern
+Hess et al. found when they tested whether Ahmedabad’s effect held up
+without the anomalous 2010 heat wave in the baseline.</p>
+</div>
+<div id="poisson-regression-via-model_generalized" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> 2.3 Poisson regression via <code>model_generalized()</code><a href="method-2-difference-in-differences-12-min.html#poisson-regression-via-model_generalized" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A reusable function for the main DiD estimate: a Poisson regression of
+the outcome on exposure, intervention period, their interaction, and day
+of week, week, month, year, and a holiday flag, returning the interaction
+term as an incidence rate ratio with its 95% profile-likelihood
+confidence interval.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="method-2-difference-in-differences-12-min.html#cb23-1" tabindex="-1"></a>model_generalized <span class="ot">&lt;-</span> <span class="cf">function</span>(dataframe, outcome_count, exposure, intervention, <span class="at">weights =</span> <span class="cn">NULL</span>) {</span>
+<span id="cb23-2"><a href="method-2-difference-in-differences-12-min.html#cb23-2" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(weights)) {</span>
+<span id="cb23-3"><a href="method-2-difference-in-differences-12-min.html#cb23-3" tabindex="-1"></a>    model <span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
+<span id="cb23-4"><a href="method-2-difference-in-differences-12-min.html#cb23-4" tabindex="-1"></a>      outcome_count <span class="sc">~</span> exposure <span class="sc">+</span> intervention <span class="sc">+</span> (exposure<span class="sc">:</span>intervention) <span class="sc">+</span></span>
+<span id="cb23-5"><a href="method-2-difference-in-differences-12-min.html#cb23-5" tabindex="-1"></a>        year <span class="sc">+</span> holid <span class="sc">+</span> month <span class="sc">+</span> week <span class="sc">+</span> dow,</span>
+<span id="cb23-6"><a href="method-2-difference-in-differences-12-min.html#cb23-6" tabindex="-1"></a>      <span class="at">data =</span> dataframe, <span class="at">family =</span> poisson</span>
+<span id="cb23-7"><a href="method-2-difference-in-differences-12-min.html#cb23-7" tabindex="-1"></a>    )</span>
+<span id="cb23-8"><a href="method-2-difference-in-differences-12-min.html#cb23-8" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb23-9"><a href="method-2-difference-in-differences-12-min.html#cb23-9" tabindex="-1"></a>    model <span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
+<span id="cb23-10"><a href="method-2-difference-in-differences-12-min.html#cb23-10" tabindex="-1"></a>      outcome_count <span class="sc">~</span> exposure <span class="sc">+</span> intervention <span class="sc">+</span> (exposure<span class="sc">:</span>intervention) <span class="sc">+</span></span>
+<span id="cb23-11"><a href="method-2-difference-in-differences-12-min.html#cb23-11" tabindex="-1"></a>        year <span class="sc">+</span> holid <span class="sc">+</span> month <span class="sc">+</span> week <span class="sc">+</span> dow,</span>
+<span id="cb23-12"><a href="method-2-difference-in-differences-12-min.html#cb23-12" tabindex="-1"></a>      <span class="at">data =</span> dataframe, <span class="at">family =</span> quasipoisson, <span class="at">weights =</span> weights</span>
+<span id="cb23-13"><a href="method-2-difference-in-differences-12-min.html#cb23-13" tabindex="-1"></a>    )</span>
+<span id="cb23-14"><a href="method-2-difference-in-differences-12-min.html#cb23-14" tabindex="-1"></a>  }</span>
+<span id="cb23-15"><a href="method-2-difference-in-differences-12-min.html#cb23-15" tabindex="-1"></a></span>
+<span id="cb23-16"><a href="method-2-difference-in-differences-12-min.html#cb23-16" tabindex="-1"></a>  coefficients <span class="ot">&lt;-</span> <span class="fu">coef</span>(model)</span>
+<span id="cb23-17"><a href="method-2-difference-in-differences-12-min.html#cb23-17" tabindex="-1"></a>  interaction_coefficient <span class="ot">&lt;-</span> <span class="fu">exp</span>(coefficients[<span class="fu">grep</span>(<span class="st">&quot;exposure:intervention&quot;</span>, <span class="fu">names</span>(coefficients))])</span>
+<span id="cb23-18"><a href="method-2-difference-in-differences-12-min.html#cb23-18" tabindex="-1"></a></span>
+<span id="cb23-19"><a href="method-2-difference-in-differences-12-min.html#cb23-19" tabindex="-1"></a>  conf_intervals <span class="ot">&lt;-</span> <span class="fu">exp</span>(<span class="fu">confint</span>(model))</span>
+<span id="cb23-20"><a href="method-2-difference-in-differences-12-min.html#cb23-20" tabindex="-1"></a>  interaction_confint <span class="ot">&lt;-</span> conf_intervals[<span class="fu">grep</span>(<span class="st">&quot;exposure:intervention&quot;</span>, <span class="fu">rownames</span>(conf_intervals)), ]</span>
+<span id="cb23-21"><a href="method-2-difference-in-differences-12-min.html#cb23-21" tabindex="-1"></a></span>
+<span id="cb23-22"><a href="method-2-difference-in-differences-12-min.html#cb23-22" tabindex="-1"></a>  <span class="fu">paste0</span>(<span class="fu">round</span>(interaction_coefficient, <span class="dv">2</span>), <span class="st">&quot; (&quot;</span>,</span>
+<span id="cb23-23"><a href="method-2-difference-in-differences-12-min.html#cb23-23" tabindex="-1"></a>         <span class="fu">round</span>(interaction_confint[<span class="dv">1</span>], <span class="dv">2</span>), <span class="st">&quot;, &quot;</span>,</span>
+<span id="cb23-24"><a href="method-2-difference-in-differences-12-min.html#cb23-24" tabindex="-1"></a>         <span class="fu">round</span>(interaction_confint[<span class="dv">2</span>], <span class="dv">2</span>), <span class="st">&quot;)&quot;</span>)</span>
+<span id="cb23-25"><a href="method-2-difference-in-differences-12-min.html#cb23-25" tabindex="-1"></a>}</span></code></pre></div>
+<p><strong>Overall model:</strong></p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="method-2-difference-in-differences-12-min.html#cb24-1" tabindex="-1"></a>did_overall_irr <span class="ot">&lt;-</span> <span class="fu">model_generalized</span>(</span>
+<span id="cb24-2"><a href="method-2-difference-in-differences-12-min.html#cb24-2" tabindex="-1"></a>  <span class="at">dataframe    =</span> daily_counts,</span>
+<span id="cb24-3"><a href="method-2-difference-in-differences-12-min.html#cb24-3" tabindex="-1"></a>  <span class="at">outcome_count =</span> daily_counts<span class="sc">$</span>n_encounters_actual,</span>
+<span id="cb24-4"><a href="method-2-difference-in-differences-12-min.html#cb24-4" tabindex="-1"></a>  <span class="at">exposure     =</span> daily_counts<span class="sc">$</span>extreme,</span>
+<span id="cb24-5"><a href="method-2-difference-in-differences-12-min.html#cb24-5" tabindex="-1"></a>  <span class="at">intervention =</span> daily_counts<span class="sc">$</span>post</span>
+<span id="cb24-6"><a href="method-2-difference-in-differences-12-min.html#cb24-6" tabindex="-1"></a>)</span>
+<span id="cb24-7"><a href="method-2-difference-in-differences-12-min.html#cb24-7" tabindex="-1"></a>did_overall_irr</span></code></pre></div>
+<pre><code>## [1] &quot;0.96 (0.92, 1)&quot;</code></pre>
+<p><strong>Stratified calls</strong>, applied to a couple of subgroups the way an actual
+stratified analysis would: insurance type and chronic mental illness
+status, since those are the two characteristics with drifting composition
+built into the simulation.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="method-2-difference-in-differences-12-min.html#cb26-1" tabindex="-1"></a>daily_by_group <span class="ot">&lt;-</span> <span class="cf">function</span>(filter_expr) {</span>
+<span id="cb26-2"><a href="method-2-difference-in-differences-12-min.html#cb26-2" tabindex="-1"></a>  encounters <span class="sc">%&gt;%</span></span>
+<span id="cb26-3"><a href="method-2-difference-in-differences-12-min.html#cb26-3" tabindex="-1"></a>    <span class="fu">filter</span>({{ filter_expr }}) <span class="sc">%&gt;%</span></span>
+<span id="cb26-4"><a href="method-2-difference-in-differences-12-min.html#cb26-4" tabindex="-1"></a>    <span class="fu">count</span>(date, <span class="at">name =</span> <span class="st">&quot;n_encounters_actual&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb26-5"><a href="method-2-difference-in-differences-12-min.html#cb26-5" tabindex="-1"></a>    <span class="fu">right_join</span>(daily_df, <span class="at">by =</span> <span class="st">&quot;date&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb26-6"><a href="method-2-difference-in-differences-12-min.html#cb26-6" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb26-7"><a href="method-2-difference-in-differences-12-min.html#cb26-7" tabindex="-1"></a>      <span class="at">n_encounters_actual =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(n_encounters_actual), <span class="dv">0</span>, n_encounters_actual),</span>
+<span id="cb26-8"><a href="method-2-difference-in-differences-12-min.html#cb26-8" tabindex="-1"></a>      <span class="at">dow   =</span> <span class="fu">wday</span>(date),</span>
+<span id="cb26-9"><a href="method-2-difference-in-differences-12-min.html#cb26-9" tabindex="-1"></a>      <span class="at">week  =</span> <span class="fu">week</span>(date),</span>
+<span id="cb26-10"><a href="method-2-difference-in-differences-12-min.html#cb26-10" tabindex="-1"></a>      <span class="at">holid =</span> <span class="fu">as.integer</span>(date <span class="sc">%in%</span> holidays)</span>
+<span id="cb26-11"><a href="method-2-difference-in-differences-12-min.html#cb26-11" tabindex="-1"></a>    )</span>
+<span id="cb26-12"><a href="method-2-difference-in-differences-12-min.html#cb26-12" tabindex="-1"></a>}</span>
+<span id="cb26-13"><a href="method-2-difference-in-differences-12-min.html#cb26-13" tabindex="-1"></a></span>
+<span id="cb26-14"><a href="method-2-difference-in-differences-12-min.html#cb26-14" tabindex="-1"></a>medicaid_uninsured  <span class="ot">&lt;-</span> <span class="fu">daily_by_group</span>(insurance <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Medicaid&quot;</span>, <span class="st">&quot;Uninsured&quot;</span>))</span>
+<span id="cb26-15"><a href="method-2-difference-in-differences-12-min.html#cb26-15" tabindex="-1"></a>commercial_medicare <span class="ot">&lt;-</span> <span class="fu">daily_by_group</span>(insurance <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Commercial&quot;</span>, <span class="st">&quot;Medicare&quot;</span>))</span>
+<span id="cb26-16"><a href="method-2-difference-in-differences-12-min.html#cb26-16" tabindex="-1"></a>chronic_mi_group    <span class="ot">&lt;-</span> <span class="fu">daily_by_group</span>(chronic_mi <span class="sc">==</span> <span class="dv">1</span>)</span>
+<span id="cb26-17"><a href="method-2-difference-in-differences-12-min.html#cb26-17" tabindex="-1"></a></span>
+<span id="cb26-18"><a href="method-2-difference-in-differences-12-min.html#cb26-18" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
+<span id="cb26-19"><a href="method-2-difference-in-differences-12-min.html#cb26-19" tabindex="-1"></a>  <span class="at">subgroup =</span> <span class="fu">c</span>(<span class="st">&quot;Medicaid/Uninsured&quot;</span>, <span class="st">&quot;Commercial/Medicare&quot;</span>, <span class="st">&quot;Chronic mental illness&quot;</span>),</span>
+<span id="cb26-20"><a href="method-2-difference-in-differences-12-min.html#cb26-20" tabindex="-1"></a>  <span class="at">IRR =</span> <span class="fu">c</span>(</span>
+<span id="cb26-21"><a href="method-2-difference-in-differences-12-min.html#cb26-21" tabindex="-1"></a>    <span class="fu">model_generalized</span>(medicaid_uninsured, medicaid_uninsured<span class="sc">$</span>n_encounters_actual,</span>
+<span id="cb26-22"><a href="method-2-difference-in-differences-12-min.html#cb26-22" tabindex="-1"></a>                       medicaid_uninsured<span class="sc">$</span>extreme, medicaid_uninsured<span class="sc">$</span>post),</span>
+<span id="cb26-23"><a href="method-2-difference-in-differences-12-min.html#cb26-23" tabindex="-1"></a>    <span class="fu">model_generalized</span>(commercial_medicare, commercial_medicare<span class="sc">$</span>n_encounters_actual,</span>
+<span id="cb26-24"><a href="method-2-difference-in-differences-12-min.html#cb26-24" tabindex="-1"></a>                       commercial_medicare<span class="sc">$</span>extreme, commercial_medicare<span class="sc">$</span>post),</span>
+<span id="cb26-25"><a href="method-2-difference-in-differences-12-min.html#cb26-25" tabindex="-1"></a>    <span class="fu">model_generalized</span>(chronic_mi_group, chronic_mi_group<span class="sc">$</span>n_encounters_actual,</span>
+<span id="cb26-26"><a href="method-2-difference-in-differences-12-min.html#cb26-26" tabindex="-1"></a>                       chronic_mi_group<span class="sc">$</span>extreme, chronic_mi_group<span class="sc">$</span>post)</span>
+<span id="cb26-27"><a href="method-2-difference-in-differences-12-min.html#cb26-27" tabindex="-1"></a>  )</span>
+<span id="cb26-28"><a href="method-2-difference-in-differences-12-min.html#cb26-28" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>##                 subgroup               IRR
+## 1     Medicaid/Uninsured 0.97 (0.93, 1.01)
+## 2    Commercial/Medicare 0.91 (0.83, 0.99)
+## 3 Chronic mental illness 0.99 (0.92, 1.06)</code></pre>
+<p><strong>Reading the output.</strong> The interaction-term IRR is the DiD estimate: a
+value below 1 means the extra risk on an extreme heat day was smaller
+after the intervention than before it, controlling for day of week,
+week, month, year, and holidays. Because we built a true attenuation of
+about 36% into the simulation, a well-specified DiD model should land
+somewhere in that neighborhood for the overall estimate.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="method-1-time-stratified-case-crossover-10-min.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

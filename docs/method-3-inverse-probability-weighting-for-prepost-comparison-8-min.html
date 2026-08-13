@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Method 3: Inverse Probability Weighting for Pre/Post Comparison (8 min) | Evaluating Heat Adaptation Interventions</title>
+  <meta name="description" content="4 Method 3: Inverse Probability Weighting for Pre/Post Comparison (8 min) | Evaluating Heat Adaptation Interventions" />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Method 3: Inverse Probability Weighting for Pre/Post Comparison (8 min) | Evaluating Heat Adaptation Interventions" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Method 3: Inverse Probability Weighting for Pre/Post Comparison (8 min) | Evaluating Heat Adaptation Interventions" />
+  
+  
+  
+
+<meta name="author" content="Dr. Amruta Nori-Sarma" />
+
+
+<meta name="date" content="2026-08-13" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="method-2-difference-in-differences-12-min.html"/>
+<link rel="next" href="bringing-it-together-5-min.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="chapter" data-level="1" data-path="building-the-synthetic-best-like-population-10-min.html"><a href="building-the-synthetic-best-like-population-10-min.html"><i class="fa fa-check"></i><b>1</b> Building the Synthetic BEST-like Population (10 min)</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="building-the-synthetic-best-like-population-10-min.html"><a href="building-the-synthetic-best-like-population-10-min.html#a-daily-temperature-series-with-a-known-extreme-heat-threshold"><i class="fa fa-check"></i><b>1.1</b> A Daily Temperature Series with a Known “Extreme Heat” Threshold</a></li>
+<li class="chapter" data-level="1.2" data-path="building-the-synthetic-best-like-population-10-min.html"><a href="building-the-synthetic-best-like-population-10-min.html#simulating-individual-encounters-with-a-known-ground-truth-baked-in"><i class="fa fa-check"></i><b>1.2</b> Simulating Individual Encounters, with a Known Ground Truth Baked In</a></li>
+<li class="chapter" data-level="1.3" data-path="building-the-synthetic-best-like-population-10-min.html"><a href="building-the-synthetic-best-like-population-10-min.html#sanity-checks"><i class="fa fa-check"></i><b>1.3</b> Sanity Checks</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="method-1-time-stratified-case-crossover-10-min.html"><a href="method-1-time-stratified-case-crossover-10-min.html"><i class="fa fa-check"></i><b>2</b> Method 1: Time-Stratified Case-Crossover (10 min)</a></li>
+<li class="chapter" data-level="3" data-path="method-2-difference-in-differences-12-min.html"><a href="method-2-difference-in-differences-12-min.html"><i class="fa fa-check"></i><b>3</b> Method 2: Difference-in-Differences (12 min)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="method-2-difference-in-differences-12-min.html"><a href="method-2-difference-in-differences-12-min.html#descriptive-table-1-with-a-naive-did-term"><i class="fa fa-check"></i><b>3.1</b> 2.1 Descriptive Table 1, with a naive DiD term</a></li>
+<li class="chapter" data-level="3.2" data-path="method-2-difference-in-differences-12-min.html"><a href="method-2-difference-in-differences-12-min.html#event-study-plot"><i class="fa fa-check"></i><b>3.2</b> 2.2 Event-study plot</a></li>
+<li class="chapter" data-level="3.3" data-path="method-2-difference-in-differences-12-min.html"><a href="method-2-difference-in-differences-12-min.html#poisson-regression-via-model_generalized"><i class="fa fa-check"></i><b>3.3</b> 2.3 Poisson regression via <code>model_generalized()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html"><i class="fa fa-check"></i><b>4</b> Method 3: Inverse Probability Weighting for Pre/Post Comparison (8 min)</a></li>
+<li class="chapter" data-level="5" data-path="bringing-it-together-5-min.html"><a href="bringing-it-together-5-min.html"><i class="fa fa-check"></i><b>5</b> Bringing It Together (5 min)</a></li>
+<li class="chapter" data-level="" data-path="session-info.html"><a href="session-info.html"><i class="fa fa-check"></i>Session Info</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Evaluating Heat Adaptation Interventions</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="method-3-inverse-probability-weighting-for-prepost-comparison-8-min" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Method 3: Inverse Probability Weighting for Pre/Post Comparison (8 min)<a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#method-3-inverse-probability-weighting-for-prepost-comparison-8-min" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The DiD model above still assumes the population being served didn’t
+change in ways that matter. But we built in exactly the kind of
+compositional drift Hess et al. flagged as an unmeasured concern for
+Ahmedabad: rising Medicaid/uninsured share, rising chronic mental illness
+prevalence, rising social vulnerability. If those shifts are themselves
+associated with heat sensitivity, they could bias the DiD estimate in
+either direction.</p>
+<p>The IPW approach: model the probability that a given encounter falls in
+the post-period as a function of its measured characteristics, then
+reweight each day’s contribution to the model so that the weighted
+population looks similar across the pre- and post-periods on those
+measured characteristics. This does not fix confounding by <em>unmeasured</em>
+factors (air pollution, healthcare access, publicity effects) any more
+than the original Ahmedabad study could, but it does directly address the
+one confounding pathway we actually simulated and can observe.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-1" tabindex="-1"></a>ps_model <span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
+<span id="cb28-2"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-2" tabindex="-1"></a>  post <span class="sc">~</span> age <span class="sc">+</span> sex <span class="sc">+</span> insurance <span class="sc">+</span> chronic_mi <span class="sc">+</span> svi,</span>
+<span id="cb28-3"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-3" tabindex="-1"></a>  <span class="at">data =</span> encounters, <span class="at">family =</span> binomial</span>
+<span id="cb28-4"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-4" tabindex="-1"></a>)</span>
+<span id="cb28-5"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-5" tabindex="-1"></a></span>
+<span id="cb28-6"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-6" tabindex="-1"></a>encounters<span class="sc">$</span>p_post <span class="ot">&lt;-</span> <span class="fu">predict</span>(ps_model, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>)</span>
+<span id="cb28-7"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-7" tabindex="-1"></a>marginal_p_post <span class="ot">&lt;-</span> <span class="fu">mean</span>(encounters<span class="sc">$</span>post)</span>
+<span id="cb28-8"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-8" tabindex="-1"></a></span>
+<span id="cb28-9"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-9" tabindex="-1"></a>encounters <span class="ot">&lt;-</span> encounters <span class="sc">%&gt;%</span></span>
+<span id="cb28-10"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-10" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb28-11"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-11" tabindex="-1"></a>    <span class="at">sw =</span> <span class="fu">ifelse</span>(post <span class="sc">==</span> <span class="dv">1</span>, marginal_p_post <span class="sc">/</span> p_post, (<span class="dv">1</span> <span class="sc">-</span> marginal_p_post) <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">-</span> p_post))</span>
+<span id="cb28-12"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-12" tabindex="-1"></a>  )</span>
+<span id="cb28-13"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-13" tabindex="-1"></a></span>
+<span id="cb28-14"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-14" tabindex="-1"></a><span class="co"># trim extreme weights, standard practice to avoid a small number of</span></span>
+<span id="cb28-15"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-15" tabindex="-1"></a><span class="co"># observations dominating the model</span></span>
+<span id="cb28-16"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-16" tabindex="-1"></a>sw_caps <span class="ot">&lt;-</span> <span class="fu">quantile</span>(encounters<span class="sc">$</span>sw, <span class="fu">c</span>(<span class="fl">0.01</span>, <span class="fl">0.99</span>))</span>
+<span id="cb28-17"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-17" tabindex="-1"></a>encounters<span class="sc">$</span>sw_trimmed <span class="ot">&lt;-</span> <span class="fu">pmin</span>(<span class="fu">pmax</span>(encounters<span class="sc">$</span>sw, sw_caps[<span class="dv">1</span>]), sw_caps[<span class="dv">2</span>])</span>
+<span id="cb28-18"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-18" tabindex="-1"></a></span>
+<span id="cb28-19"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb28-19" tabindex="-1"></a><span class="fu">summary</span>(encounters<span class="sc">$</span>sw_trimmed)</span></code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##  0.6386  0.8163  0.9417  0.9973  1.1160  1.9276</code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb30-1" tabindex="-1"></a><span class="co"># quick covariate balance check: unweighted vs weighted mean SVI and</span></span>
+<span id="cb30-2"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb30-2" tabindex="-1"></a><span class="co"># chronic_mi by period. If weighting is doing its job, the weighted</span></span>
+<span id="cb30-3"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb30-3" tabindex="-1"></a><span class="co"># pre/post gap should shrink relative to the unweighted gap.</span></span>
+<span id="cb30-4"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb30-4" tabindex="-1"></a>balance_check <span class="ot">&lt;-</span> encounters <span class="sc">%&gt;%</span></span>
+<span id="cb30-5"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb30-5" tabindex="-1"></a>  <span class="fu">group_by</span>(post) <span class="sc">%&gt;%</span></span>
+<span id="cb30-6"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb30-6" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb30-7"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb30-7" tabindex="-1"></a>    <span class="at">unweighted_svi        =</span> <span class="fu">mean</span>(svi),</span>
+<span id="cb30-8"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb30-8" tabindex="-1"></a>    <span class="at">weighted_svi          =</span> <span class="fu">weighted.mean</span>(svi, sw_trimmed),</span>
+<span id="cb30-9"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb30-9" tabindex="-1"></a>    <span class="at">unweighted_chronic_mi =</span> <span class="fu">mean</span>(chronic_mi),</span>
+<span id="cb30-10"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb30-10" tabindex="-1"></a>    <span class="at">weighted_chronic_mi   =</span> <span class="fu">weighted.mean</span>(chronic_mi, sw_trimmed)</span>
+<span id="cb30-11"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb30-11" tabindex="-1"></a>  )</span>
+<span id="cb30-12"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb30-12" tabindex="-1"></a></span>
+<span id="cb30-13"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb30-13" tabindex="-1"></a><span class="fu">print</span>(balance_check)</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 5
+##    post unweighted_svi weighted_svi unweighted_chronic_mi weighted_chronic_mi
+##   &lt;int&gt;          &lt;dbl&gt;        &lt;dbl&gt;                 &lt;dbl&gt;               &lt;dbl&gt;
+## 1     0          0.476        0.501                 0.297               0.311
+## 2     1          0.530        0.503                 0.328               0.312</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb32-1" tabindex="-1"></a><span class="co"># aggregate the per-encounter weights up to a day-level average weight,</span></span>
+<span id="cb32-2"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb32-2" tabindex="-1"></a><span class="co"># then refeed the SAME model_generalized() function used for the DiD</span></span>
+<span id="cb32-3"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb32-3" tabindex="-1"></a><span class="co"># section, now with weights supplied</span></span>
+<span id="cb32-4"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb32-4" tabindex="-1"></a>day_weights <span class="ot">&lt;-</span> encounters <span class="sc">%&gt;%</span></span>
+<span id="cb32-5"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb32-5" tabindex="-1"></a>  <span class="fu">group_by</span>(date) <span class="sc">%&gt;%</span></span>
+<span id="cb32-6"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb32-6" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">day_avg_sw =</span> <span class="fu">mean</span>(sw_trimmed))</span>
+<span id="cb32-7"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb32-7" tabindex="-1"></a></span>
+<span id="cb32-8"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb32-8" tabindex="-1"></a>daily_counts_ipw <span class="ot">&lt;-</span> daily_counts <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(day_weights, <span class="at">by =</span> <span class="st">&quot;date&quot;</span>)</span>
+<span id="cb32-9"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb32-9" tabindex="-1"></a>daily_counts_ipw<span class="sc">$</span>day_avg_sw[<span class="fu">is.na</span>(daily_counts_ipw<span class="sc">$</span>day_avg_sw)] <span class="ot">&lt;-</span> <span class="dv">1</span>  <span class="co"># no encounters that day</span></span>
+<span id="cb32-10"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb32-10" tabindex="-1"></a></span>
+<span id="cb32-11"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb32-11" tabindex="-1"></a>ipw_irr <span class="ot">&lt;-</span> <span class="fu">model_generalized</span>(</span>
+<span id="cb32-12"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb32-12" tabindex="-1"></a>  <span class="at">dataframe    =</span> daily_counts_ipw,</span>
+<span id="cb32-13"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb32-13" tabindex="-1"></a>  <span class="at">outcome_count =</span> daily_counts_ipw<span class="sc">$</span>n_encounters_actual,</span>
+<span id="cb32-14"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb32-14" tabindex="-1"></a>  <span class="at">exposure     =</span> daily_counts_ipw<span class="sc">$</span>extreme,</span>
+<span id="cb32-15"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb32-15" tabindex="-1"></a>  <span class="at">intervention =</span> daily_counts_ipw<span class="sc">$</span>post,</span>
+<span id="cb32-16"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb32-16" tabindex="-1"></a>  <span class="at">weights      =</span> daily_counts_ipw<span class="sc">$</span>day_avg_sw</span>
+<span id="cb32-17"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb32-17" tabindex="-1"></a>)</span>
+<span id="cb32-18"><a href="method-3-inverse-probability-weighting-for-prepost-comparison-8-min.html#cb32-18" tabindex="-1"></a>ipw_irr</span></code></pre></div>
+<pre><code>## [1] &quot;0.96 (0.92, 1)&quot;</code></pre>
+<p><strong>What to look for.</strong> Compare this IRR to the unweighted DiD estimate
+from Section 2.3. If they’re close, that’s evidence the compositional
+drift we simulated wasn’t actually biasing the unweighted estimate much.
+If they diverge, that tells you the population shift was doing some of
+the work you might otherwise have attributed to the intervention itself,
+exactly the ambiguity Hess et al. could not rule out for Ahmedabad
+because they had no individual-level data to weight on.</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="method-2-difference-in-differences-12-min.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bringing-it-together-5-min.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

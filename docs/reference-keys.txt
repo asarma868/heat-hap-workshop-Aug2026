@@ -1,0 +1,11 @@
+building-the-synthetic-best-like-population-10-min
+a-daily-temperature-series-with-a-known-extreme-heat-threshold
+simulating-individual-encounters-with-a-known-ground-truth-baked-in
+sanity-checks
+method-1-time-stratified-case-crossover-10-min
+method-2-difference-in-differences-12-min
+descriptive-table-1-with-a-naive-did-term
+event-study-plot
+poisson-regression-via-model_generalized
+method-3-inverse-probability-weighting-for-prepost-comparison-8-min
+bringing-it-together-5-min
